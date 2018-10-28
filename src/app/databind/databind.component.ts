@@ -8,13 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class DatabindComponent implements OnInit {
 
   serverID: number =  10;
-  serverstatus: string = 'online';
+  serverstatus: string = 'offline';
+  allowNewServer = false;
 
   getServerStatus() {
     return this.serverstatus;
   }
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      this.serverstatus = "online";
+    },2000);
+
+   }
 
   ngOnInit() {
   }
