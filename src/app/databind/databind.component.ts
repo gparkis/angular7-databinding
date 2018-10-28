@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatabindComponent implements OnInit {
 
+  serverID: number =  10;
+  serverstatus: string = 'offline';
+
+
   constructor() { }
 
   ngOnInit() {
