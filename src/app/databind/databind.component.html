@@ -1,3 +1,3 @@
-<button class="btn btn-primary" [disabled]>Add Server</button>
+<button class="btn btn-primary" [disabled] = "!allowNewServer">Add Server</button>
 
-<h1>SERVER ID is {{serverID}} and status is {{ getServerStatus() }} </h1>
+<h1>SERVER ID is {{serverID}} and status is: <span class="colorchg"> {{ getServerStatus() }} </span></h1>

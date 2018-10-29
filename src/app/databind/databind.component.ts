@@ -9,7 +9,7 @@ export class DatabindComponent implements OnInit {
 
   serverID: number =  10;
   serverstatus: string = 'offline';
-  allowNewServer = false;
+  allowNewServer: boolean = false;
 
   getServerStatus() {
     return this.serverstatus;
@@ -20,6 +20,9 @@ export class DatabindComponent implements OnInit {
       this.serverstatus = "online";
     },2000);
 
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 4000);
    }
 
   ngOnInit() {
