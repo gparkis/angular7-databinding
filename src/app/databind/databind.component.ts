@@ -10,6 +10,7 @@ export class DatabindComponent implements OnInit {
   serverID: number =  10;
   serverstatus: string = 'offline';
   allowNewServer: boolean = false;
+  serverCreationStatus: string = 'No server was yet created';
 
   getServerStatus() {
     return this.serverstatus;
@@ -26,6 +27,10 @@ export class DatabindComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created';
   }
 
 }
